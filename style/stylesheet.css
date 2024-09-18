@@ -1,0 +1,847 @@
+/* if you want to make comment in any language you use make it using control slash */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/*                                                      Making the first section of the website                                      */
+
+.header {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(95, 158, 160,0.5);
+    color: aliceblue;
+    position: fixed;
+    z-index: 20;
+}
+
+.logo {
+    width: 80px;
+    height: 50px;
+    float: left;
+    border-radius: 15px;
+    margin-right: 600px;
+    margin-left: 140px;
+}
+
+.headerlist li{
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: larger;
+    position: relative;
+}
+
+.firstpage {
+    position: relative;
+}
+
+.wallpaper {
+    width: 100%;
+    height: 100vh;
+}
+
+.headerinfo {
+
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.headerinfo h2 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: aliceblue;
+    width: 900px;
+}
+
+.headerinfo p {
+    color: beige;
+    width: 800px;
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+.headerinfo button {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    border: 0;
+    border-radius: 10px;
+}
+
+.start {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+.learn {
+    background-color: aliceblue;
+    color: cadetblue;
+}
+
+.headerinfo button:hover {
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+}
+
+/*                                                      Making the second section of the website                                      */
+
+.welcomepage {
+    width: 1300px;
+    margin: auto;
+    height: 600px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    overflow: auto;
+
+}
+
+h2 {
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+    color: cadetblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.booking {
+    border: solid 1px cadetblue;
+    width: 30%;
+    height: 220px;
+    margin-left: 30px;
+    float: left;
+    padding: 3px;
+    position: relative;
+    overflow: hidden; /* Ensure child elements do not overflow */
+}
+
+.booking h2, .booking p, .booking a, .icon {
+    transition: color 0.25s; /* Smooth transition for color change */
+    position: relative; /* Ensure text stays above overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+.booking h2 {
+    font-size: 30px;
+    margin-top: 3px;
+}
+
+hr {
+    width: 80px;
+    height: 5px;
+    margin: auto;
+    background-color: cadetblue;
+    margin-top: 10px;
+}
+
+.icon {
+    color: cornflowerblue; /* Default icon color */
+    font-size: 25px;
+}
+
+/* Using ::after for the overlay effect */
+.booking::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue; /* Match overlay color with border */
+    transform: scaleX(0) scaleY(0); /* Start with a scale of 0 */
+    transform-origin: top left; /* Origin from top-left corner */
+    transition: transform 0.5s ease, opacity 0.25s ease; /* Smooth transitions for both transform and opacity */
+    opacity: 0; /* Initially hidden */
+    z-index: 1; /* Positioned behind the h2, p, and a elements */
+}
+
+.booking:hover::after {
+    transform: scaleX(1) scaleY(1); /* Expand to cover the entire container */
+    opacity: 0.8; /* Show overlay on hover */
+}
+
+.booking:hover h2,
+.booking:hover p,
+.booking:hover a,
+.booking:hover .icon {
+    color: rgb(255, 255, 255); /* Change color on hover */
+}
+
+
+/*                                                      Making the third section of the website                                      */
+.feature {
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(255, 252, 252);
+    text-align: center;
+    margin: auto;
+    overflow: auto;
+    position: relative;
+}
+
+.place {
+    padding: 3px;
+    width: 380px;
+    height: 380px;
+    margin-left: 75px;
+    margin-top: 40px;
+    float: left;
+    position: relative;
+}
+
+.overlay {
+    background-color: darkgray;
+    padding: 3px;
+    width: 380px;
+    height: 380px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    opacity: 0.7;
+    visibility: hidden;
+}
+
+.place:hover .overlay {
+    visibility: visible;
+}
+
+.place:hover pp {
+    visibility: visible;
+}
+
+.place:hover .country {
+    visibility: visible;
+}
+
+.place:hover .aa {
+    visibility: visible;
+}
+
+.aa {
+    font-size: 30px;
+    color: blue;
+}
+
+.country {
+    color: blue;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.pp {
+    color: black;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+}
+
+.place img {
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+
+}
+
+/*                                                      Making the fourth section of the website                                      */
+.offers {
+    width: 1300px;
+    margin: auto;
+    height: 600px;
+    position: relative;
+    overflow: auto;
+}
+
+.offer {
+    width: 350px;
+    height: 170px;
+    margin-left: 60px;
+    float: left;
+    border: solid 1px gray;
+    padding: 20px;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden; /* Ensure child elements do not overflow */
+}
+
+/* Transition for smooth color change */
+.offer h2, .offer p, .iconn {
+    transition: color 0.25s; /* Smooth transition for color change */
+    position: relative; /* Ensure text stays above overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+}
+
+/* Default styles for text and icons */
+.offer h2 {
+    font-size: 30px;
+    color: cadetblue;
+    display: inline;
+}
+
+.iconn {
+    font-size: 35px;
+    color: cornflowerblue;
+    margin-right: 5px;
+}
+
+/* Using ::before for the overlay effect */
+.offer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover entire width */
+    height: 100%; /* Cover entire height */
+    background-color:cadetblue;
+    transform: scaleX(0) scaleY(0); /* Start with a scale of 0 */
+    transform-origin: top left; /* Origin from top-left corner */
+    transition: transform 0.5s ease, opacity 0.25s ease; /* Smooth transitions for both transform and opacity */
+    opacity: 0; /* Initially hidden */
+    z-index: 1; /* Positioned behind the text */
+}
+
+/* Hover effect to expand overlay and change text color */
+.offer:hover::before {
+    transform: scaleX(1) scaleY(1); /* Expand to cover the entire container */
+    opacity: 0.8; /* Show overlay on hover */
+}
+
+.offer:hover h2,
+.offer:hover p,
+.offer:hover .iconn {
+    color: rgb(255, 255, 255); /* Change color on hover */
+}
+
+.offer:hover h2 {
+    color: rgb(251, 251, 251); /* Override specific color for h2 on hover */
+}
+
+
+/*                                                      Making the fifth section of the website                                      */
+.chooseus {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 252, 252);
+    overflow: auto;
+    position: relative;
+}
+
+.underline{
+    width: 70px;
+    height: 5px;
+    background-color: cadetblue;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.choosing {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: cadetblue;
+    text-transform: capitalize;
+}
+
+.spe {
+    color: rgb(130, 129, 129);
+}
+
+.chinfo {
+    width: 43%;
+    height: 400px;
+    padding: 30px;
+    margin-left: 55px;
+    float: left;
+}
+
+.chinfo hr {
+    width: 80px;
+    height: 5px;
+    background-color: cadetblue;
+    margin-top: 10px;
+}
+
+.chp {
+    display: inline;
+    margin-top: 10px;
+    color: rgb(130, 129, 129);
+
+}
+
+.iconnn {
+    color: cornflowerblue;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.photo {
+    width: 43%;
+    height: 430px;
+    margin-left: 100px;
+    float: left;
+    text-align: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 10px;
+}
+
+/*                                                      Making the sixth section of the website                                      */
+
+.photosection {
+
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/photo11.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    margin: auto;
+
+}
+
+.photoicon {
+    font-size: 40px;
+    color: cornflowerblue;
+    position: relative;
+
+}
+
+.iconinfo {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding: 100px;
+}
+
+.iconinfo1 {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin-left: 120px;
+    padding: 100px;
+}
+
+.numbers {
+    font-size: 40px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.information {
+    font-size: 20px;
+    color: rgb(224, 231, 243);
+}
+
+
+/*                                                      Making the seventh section of the website                                      */
+
+
+.pricing {
+    border: solid 1px black;
+    width: 100%;
+    height: 700px;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+
+}
+
+h4 {
+    font-size: 30px;
+    color: darkcyan;
+}
+
+.pricingoffer {
+    float: left;
+    margin-left: 100px;
+    text-align: center;
+    border: solid 1px darkcyan;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(233, 233, 233);
+    position: relative;
+}
+
+.pricingoffer::after {
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: "";
+}
+
+.pricingoffer:hover::after {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: cadetblue;
+    opacity: 0.3;
+
+}
+
+.circlep {
+    font-size: 20px;
+    font-weight: bold;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: solid 2px cadetblue;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+.offerp {
+    margin-top: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+
+}
+
+.offerbutton {
+    width: 150px;
+    height: 30px;
+    border: solid 2px darkcyan;
+    color: darkgreen;
+}
+
+/*                                                      Making The eighth section of the website                                      */
+
+.team1 {
+    border: solid 1px black;
+    width: 100%;
+    height: 300px;
+    background-image: url("../images/sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+}
+
+.personalinfo {
+    float: left;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.personalinfo h3 {
+    display: inline;
+    color: aliceblue;
+    margin-left: 10px;
+    float: left;
+
+}
+
+.personalinfo p {
+    margin-top: 5px;
+    display: inline-block;
+    color: aliceblue;
+}
+
+.personalphoto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: inline;
+    float: left;
+    margin-top: 10px;
+
+}
+
+/*                                                      Making The nine section of the website                                      */
+
+.teamcont{ 
+    width: 80%;
+    margin: auto;
+} /* the container div just take this 2 properties and we will make another div is the parent div to handle the position and the other properties the container is just for defining the spaces of the div */
+
+.teamparent{
+overflow: auto;
+}
+
+.teamitem{
+float: left;
+width: 30%;
+text-align: center;
+padding:18px 14px ;
+position: relative;
+}
+
+.teamitem:hover .teaminfotitle{
+    color: rgb(90, 142, 246);
+}
+
+.teamitem:hover .teaminfop{
+    color: rgb(134, 193, 216);
+}
+
+.ii{
+    font-size: 47px;
+}
+
+.teamitem:hover .teamoverlay{
+visibility: visible;
+}
+.memberphoto{
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+
+.memberphoto img{
+    width: 100%;
+}
+
+.teaminfotitle{
+    color: rgb(11, 11, 11);
+    padding: 11px 0;
+    font-size: 20px;
+}
+
+.teaminfop{
+    color:rgb(16, 17, 17);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.teamoverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0,0.5);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*if we use opacity in the previous item he will apply it to all items on it so we use the rgb function to just apply the opacity for the color */
+
+.teamoverlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(62, 114, 226);
+    margin-left: auto; /*it will stay increases until reach the end of the parent */
+}
+
+.teamoverlay a i{
+    line-height: 40px;
+}
+/*if we use height here it will not work because i is inline element so it will not affect from the height but it will be affected from the line hieght itself */
+
+.mid{
+margin: 0 5%;
+}
+
+.mid img{
+    height: 200px;
+}
+
+.teamitem::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+}
+
+.teamitem:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: rgb(64, 75, 82);
+    transition: 0.75s;
+}
+/*                                                      Making The ten section of the website                                      */
+.container {
+    width: 100%;
+    height: 751px;
+}
+
+.recentnews {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+.new {
+    width: 30%;
+    height: 520px;
+    margin-top: 50px;
+    float: left;
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+
+.newphoto {
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.newicon {
+    color: cadetblue;
+    display: inline-block;
+}
+
+.newicon p,
+.newiconmid p {
+    color: black;
+    text-transform: capitalize;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.newiconmid {
+    margin: 0 20px;
+    color: cadetblue;
+    display: inline-block;
+}
+
+.newtitle {
+    margin-top: 10px;
+    color: cadetblue;
+    text-transform: lowercase;
+    font-size: x-large;
+}
+
+.newinfo {
+    margin: 20px 0;
+}
+
+.readmore {
+    color: cadetblue;
+    font-size: 20px;
+}
+
+.new::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+}
+
+.new:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: lightskyblue;
+    transition: 0.75s;
+}
+
+.middlenew {
+    float: left;
+    margin: 0 5%;
+    width: 30%;
+    height: 520px;
+    margin-top: 50px;
+    float: left;
+    padding: 0 20px 20px 20px;
+    position: relative;
+}
+
+.middlenew::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    content: "";
+}
+
+.middlenew:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background-color: lightskyblue;
+    transition: 0.75s;
+}
+
+/*                                                      Making The last section of the website                                      */
+.lastsection {
+    width: 100%;
+    height: 350px;
+    background-color: cadetblue;
+    margin: auto;
+}
+
+.lastinfo {
+    width: 350px;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+
+}
+
+.lastphoto {
+    width: 200px;
+    height: 150px;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.lastp {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: aliceblue;
+}
+/* Style for the icon container */
+.lastinfo a {
+    display: inline-flex; /* Use inline-flex for proper alignment */
+    width: 50px; /* Define the width */
+    height: 50px; /* Define the height */
+    border-radius: 50%; /* Make the container circular */
+    background-color: rgb(27, 128, 206); /* Blue background for the circle */
+    color: white; /* White color for the icon */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 24px; /* Adjust icon size if needed */
+}
+
+/* Optional: Add hover effect if desired */
+.lastinfo a:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
+
